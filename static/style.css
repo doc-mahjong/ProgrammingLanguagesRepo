@@ -1,0 +1,25 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5vh;
+    background-color: azure;
+}
+
+.container{
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+.input_group{
+    margin-top: 1rem;
+}
+
+textarea{
+    margin-top: 1.25rem;
+    resize: none;
+    height: 15vh;
+    min-height: 100px;
+}
