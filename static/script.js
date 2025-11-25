@@ -1,4 +1,7 @@
 async function shorten(){
+    
+    document.getElementById("shortenedURL").value = '';
+    
     const URL = document.getElementById("url").value;
 
     if(URL){
@@ -11,6 +14,14 @@ async function shorten(){
         });
 
         const data = await response.json();
-        document.getElementById("shortenedURL").value = data.shortURL;
+        
+        if(data["shortURL"]){
+            document.getElementById("errorField").textContent = ''
+            document.getElementById("shortenedURL").value = data.shortURL;
+        }else{
+            document.getElementById("errorField").textContent = data.error
+        }
+        
+        
     }
 }
