@@ -10,7 +10,7 @@ async function shorten(){
             body: JSON.stringify({url: URL})
         });
 
-        const data = await response.json();
-        document.getElementById("shortenedURL").value = data.shortURL;
+        const shortURL = `${window.location.origin}/${data.code}`;
+		document.getElementById("shortenedURL").value = shortURL;
     }
 }
