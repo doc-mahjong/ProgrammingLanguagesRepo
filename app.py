@@ -12,7 +12,7 @@ PASS = "scrypt:32768:8:1$JCONEeUadJf1KA6S$d603a8e9e2aae83419e38b8844117a955edd4b
 app = Flask(__name__)
 app.secret_key = "Super_Secret_Key_Nobody_Will_Ever_Guess"
 
-URL_REGEX = re.compile(r'^(https?://)([a-zA-Z0-9]+-?)\.([a-zA-Z0-9]+-?\.?)+(:\d+)?(\/.*)?$')
+URL_REGEX = re.compile(r'^(https?://)([a-zA-Z0-9]+-?)+\.([a-zA-Z0-9]+-?\.?)+(:\d+)?(\/.*)?$')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
